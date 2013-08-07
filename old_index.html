@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Auth Demo</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.0rc2.css" type="text/css" charset="utf-8" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/login.js"></script>
+</head>
+
+<body onload="init()">
+    
+<div id="loginPage" data-role="page">
+
+    <div data-role="header">
+        <h1>Pet Aide: Login</h1>
+    </div>
+
+    <div data-role="content">    
+        <form id="loginForm" method="post" action="http://localhost/check_ac.php">
+        <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" value="" placeholder="Username" />
+        </div>
+
+        <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="" placeholder="Password" />
+        </div>
+
+        <input type="submit" value="Login" id="submitButton" onclick="handleLogin();">
+        </form>
+        
+    </div>
+
+	<div data-role="header">
+        <h1>Pet Aide: Register</h1>
+    </div>
+
+    <div data-role="content">    
+        <form id="registrationForm" method="post" action="http://localhost/insert_ac.php">
+        <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" value="" placeholder="Username" />
+        </div>
+
+        <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="" placeholder="Password" />
+        </div>
+		
+		<div data-role="fieldcontain" class="ui-hide-label">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" value="" placeholder="email" />
+        </div>
+		
+        <input type="submit" value="Login" id="submitButton" onclick="handleLogin();">
+        </form>
+        
+    </div>
+
+	
+    <div data-role="footer">
+        <h4></h4>
+    </div>
+
+</div>
+
+<script>
+$("#loginPage").live("pageinit", function(e) {
+        checkPreAuth();
+    });
+</script>
+
+</body>
+</html>
