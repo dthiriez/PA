@@ -1,1 +1,1 @@
-Redirect permanent /index.html ec2-54-215-190-99.us-west-1.compute.amazonaws.com
+Redirect permanent /index.html http://ec2-54-215-179-155.us-west-1.compute.amazonaws.com/
